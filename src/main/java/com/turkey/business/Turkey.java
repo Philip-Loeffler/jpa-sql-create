@@ -1,7 +1,14 @@
 package com.turkey.business;
 
+import javax.persistence.*;
+
+import org.springframework.data.annotation.Id;
+
+@Entity
 public class Turkey {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name; 
 	private double weight;
